@@ -1,11 +1,3 @@
-//============================================================================
-// Name        : SDL.cpp
-// Author      : John Purcell
-// Version     :
-// Copyright   : Your copyright notice
-// Description : Hello World in C++, Ansi-style
-//============================================================================
-
 #include "stdafx.h"
 #include <iostream>
 #include <string>
@@ -16,7 +8,7 @@
 #include <time.h>
 #include "Swarm.h"
 using namespace std;
-using namespace caveofprogramming;
+using namespace mynamespace;
 
 int main(int argc, char *argv[]) {
 

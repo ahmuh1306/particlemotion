@@ -1,14 +1,7 @@
-/*
- * Screen.cpp
- *
- *  Created on: 1 Sep 2014
- *      Author: johnwpurcell
- */
-
 #include "stdafx.h"
 #include "Screen.h"
 
-namespace caveofprogramming {
+namespace mynamespace {
 
 Screen::Screen() :
 		m_window(NULL), m_renderer(NULL), m_texture(NULL), m_buffer1(NULL), m_buffer2(NULL) {
@@ -151,4 +144,4 @@ void Screen::close() {
 	SDL_Quit();
 }
 
-} /* namespace caveofprogramming */
+} /* namespace mynamespace */

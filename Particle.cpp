@@ -1,16 +1,9 @@
-/*
- * Particle.cpp
- *
- *  Created on: 13 Sep 2014
- *      Author: johnwpurcell
- */
-
 #include "stdafx.h"
 #include "Particle.h"
 #include <math.h>
 #include <stdlib.h>
 
-namespace caveofprogramming {
+namespace mynamespace {
 
 Particle::Particle() :
 		m_x(0), m_y(0) {
@@ -50,4 +43,4 @@ void Particle::update(int interval) {
 	}
 }
 
-} /* namespace caveofprogramming */
+} /* namespace mynamespace */
