@@ -7,20 +7,18 @@
 #include <stdlib.h>
 #include <time.h>
 #include "Swarm.h"
-using namespace std;
-using namespace mynamespace;
 
 int main(int argc, char *argv[]) {
 
 	srand(time(NULL));
 
-	Screen screen;
+	mynamespace::Screen screen;
 
 	if (screen.init() == false) {
-		cout << "Error initialising SDL." << endl;
+		std::cout << "Error initialising SDL." << std::endl;
 	}
 
-	Swarm swarm;
+	mynamespace::Swarm swarm;
 
 	while (true) {
 		// Update particles
@@ -35,13 +33,13 @@ int main(int argc, char *argv[]) {
 		unsigned char red = (unsigned char) ((1 + sin(elapsed * 0.0002)) * 128);
 		unsigned char blue = (unsigned char) ((1 + sin(elapsed * 0.0003)) * 128);
 
-		const Particle * const pParticles = swarm.getParticles();
+		const mynamespace::Particle * const pParticles = swarm.getParticles();
 
-		for (int i = 0; i < Swarm::NPARTICLES; i++) {
-			Particle particle = pParticles[i];
+		for (int i = 0; i < mynamespace::Swarm::NPARTICLES; i++) {
+			mynamespace::Particle particle = pParticles[i];
 
-			int x = (particle.m_x + 1) * Screen::SCREEN_WIDTH / 2;
-			int y = particle.m_y * Screen::SCREEN_WIDTH / 2 + Screen::SCREEN_HEIGHT/2;
+			int x = (particle.m_x + 1) * mynamespace::Screen::SCREEN_WIDTH / 2;
+			int y = particle.m_y * mynamespace::Screen::SCREEN_WIDTH / 2 + mynamespace::Screen::SCREEN_HEIGHT/2;
 
 			screen.setPixel(x, y, red, green, blue);
 		}
